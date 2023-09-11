@@ -1,8 +1,15 @@
 version: '2.4'
 services:
+  cors:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: cors
+    ports:
+      - "4545:80"
   ad-charging:
     build: ./src
-    image: 'ad-charging:1.0.1'
+    image: 'ad-charging:1.0.0'
     ports:
       - '8080:80'
     mem_limit: 50mb
