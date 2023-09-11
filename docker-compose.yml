@@ -2,7 +2,7 @@ version: '2.4'
 services:
   ad-charging:
     build: ./src
-    image: 'ad-charging:1.0.0'
+    image: 'ad-charging:1.0.1'
     ports:
       - '8080:80'
     mem_limit: 50mb

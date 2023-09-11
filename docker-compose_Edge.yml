@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+  ad-charging:
+    image: 'ieadcharging:latest'
+    ports:
+      - '8080:80'
+    mem_limit: 50mb
+    restart: "unless-stopped"
+    logging: 
+      driver: "json-file"
+      options: 
+        max-size: "10m"
+        max-file: "3"
